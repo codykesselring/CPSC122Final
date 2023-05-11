@@ -15,15 +15,18 @@ grouped = df.groupby(['artistName', 'month'])['msPlayed'].sum().reset_index()
 # Sort the data by total listening time and select the top 10 artists
 top_artists = grouped.groupby('artistName')['msPlayed'].sum().sort_values(ascending=False).head(10).index
 
+# Convert the listening time from milliseconds to hours
+grouped['hoursPlayed'] = grouped['msPlayed'] / (1000 * 60 * 60)
+
 # Create a pivot table with top artists as rows, months as columns, and total listening time as values
-pivot = pd.pivot_table(grouped[grouped['artistName'].isin(top_artists)], values='msPlayed', index='artistName', columns='month', aggfunc='sum', fill_value=0)
+pivot = pd.pivot_table(grouped[grouped['artistName'].isin(top_artists)], values='hoursPlayed', index='artistName', columns='month', aggfunc='sum', fill_value=0)
 
 # Create line charts for each artist
 for artist in top_artists:
     plt.plot(pivot.columns, pivot.loc[artist], label=artist)
 
 plt.xlabel('Month')
-plt.ylabel('Total listening time (ms)')
+plt.ylabel('Total listening time (hours)')
 plt.title('Top 10 artists by monthly listening time')
 plt.xticks(rotation=90)
 plt.legend()
