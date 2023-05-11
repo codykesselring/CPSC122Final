@@ -1,4 +1,4 @@
-CPSC 122 Final 
+CPSC 122 Final <br>
 Technical Report
 introduction:
 I chose my spotify data because I thought it would be interesting to visualize my spotify habits. 
