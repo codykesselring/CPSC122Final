@@ -7,7 +7,7 @@ I collected the data by parsing through the source files and searching for speci
 Impacts include greater self awareness as I can see my entire music history of the last year, and at a larger scale, I think companies can use the information to their advantage.<br>
 Stakeholders might be interested with this data on a larger scale to know what songs may be marketable for specific audiences.<br>
 
-Data Analysis:
+Data Analysis:<br>
 I started by making a list of all my spotify artists with their total playtime in descending order and chartted it. It resulted in a messy chart with way to many elements and was also displayed in milliseconds which are hard to understand. I cleaned it by converting milliseconds to seconds, and within the charts, I only grab a handful of artists instead of the full list.<br>
 There was no too much difficulty gathering the data itself, except for having to wait a month to get it... but having the data split amongs 4 files, and intereting the data itself was an issue at the beginning as I misinterpretted what exactly some of the attributes meant in the data.<br>
 The data aggregation techniques I used were pivot tables, filtering, and drill-down as many of the charts use months instead of days, for example.<br>
