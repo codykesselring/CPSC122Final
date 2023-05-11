@@ -9,10 +9,11 @@ Stakeholders might be interested with this data on a larger scale to know what s
 
 Data Analysis:<br><br>
 I started by making a list of all my spotify artists with their total playtime in descending order and chartted it. It resulted in a messy chart with way to many elements and was also displayed in milliseconds which are hard to understand. I cleaned it by converting milliseconds to seconds, and within the charts, I only grab a handful of artists instead of the full list.<br><br>
-There was no too much difficulty gathering the data itself, except for having to wait a month to get it... but having the data split amongs 4 files, and intereting the data itself was an issue at the beginning as I misinterpretted what exactly some of the attributes meant in the data.<br>
+There was no too much difficulty gathering the data itself, except for having to wait a month to get it... but having the data split amongs 4 files, and intereting the data itself was an issue at the beginning as I misinterpretted what exactly some of the attributes meant in the data.<br><br>
+Libraries I used include 1) matplot for displaying the graphs, 2) json for reading json files, 3) datetime for converting the string endTime in the source code to an actual date to visualize, 4) pandas lets me use functions such as concatcination, type conversion, grouping, sorting, and graph types, 5) numpy lets me use math functions such as "sum", and 6) scipy for finding a p-value. <br><br>
 The data aggregation techniques I used were pivot tables, filtering, and drill-down as many of the charts use months instead of days, for example.<br><br>
 I used many visualization techniques such as bar charts, heat tables, and line graphs to represent the data. The most useful of which were 1) the line graph showing the linear regression of total hours played of music in the last year, 2) comparing how selected artists trendlines were similar, and 3) the heatmap that tells me the average amount I listen to music at a certain time.<br><br>
-I used the t-test statistical hypothesis to see if I listen to music more during a weekday versus a weekend, and found that I do not because my t-test of .11>.05<br><br>
+I used the p-value statistical hypothesis to see if I listen to music more during a weekday versus a weekend, and found that I do not because my p-value of .11>.05<br><br>
 
 Classification models were not appropriate for my data set<br><br>
 
